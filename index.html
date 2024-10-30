@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body, html {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            color: #333;
+        }
+        /* Container styling */
+        .container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #666;
+        }
+        /* Email form styling */
+        .email-form {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .email-input {
+            width: 70%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px 0 0 8px;
+            outline: none;
+            font-size: 1em;
+        }
+        .submit-btn {
+            padding: 12px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 8px 8px 0;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #555;
+        }
+        /* Widget styling */
+        .widget-placeholder {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Coming Soon</h1>
+        <p>We exist to empower giving in Bitcoin to churches and non-profits</p>
+        
+        <!-- Email Submission Form -->
+        <form class="email-form">
+            <input type="email" class="email-input" placeholder="Enter your email" required>
+            <button type="submit" class="submit-btn">Notify Me</button>
+        </form>
+        
+        <!-- JavaScript Widget Integration -->
+        <div class="widget-placeholder">
+            <lightning-widget 
+              name="Support Our Work" 
+              accent="#6f7674" 
+              to="giveinbitcoin@coinos.io" 
+              image="https://logospng.org/download/bitcoin/logo-bitcoin-1024.png" 
+            ></lightning-widget>
+        </div>
+    </div>
+    
+    <!-- Lightning Widget Script -->
+    <script src="https://embed.twentyuno.net/js/app.js"></script>
+</body>
+</html>
