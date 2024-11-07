@@ -14,12 +14,19 @@
             font-family: Arial, sans-serif;
         }
         body, html {
-            height: 100%;
+            min-height: 100vh; /* Ensure body and html take full viewport height */
             display: flex;
-            align-items: center;
-            justify-content: center;
+            justify-content: center; /* Horizontally center */
+            overflow-y: auto; /* Allow scrolling if content overflows vertically */
             background: #f5f5f5;
             color: #333;
+        }
+        /* Wrapper to control vertical spacing */
+        .outer-wrapper {
+            width: 100%;
+            padding: 20px 0; /* Adds top and bottom padding */
+            display: flex;
+            justify-content: center; /* Centers container horizontally */
         }
         /* Container styling */
         .container {
@@ -33,7 +40,6 @@
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            margin-top: 20px;
             color: #333;
         }
         p {
@@ -96,38 +102,40 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Coming Soon</h1>
-        <p><em>“To whom much has been given, much will be required”</em></p>
-        <p></p>
-        <p class="nospace-paragraph">Better money for saving.</p>
-        <p class="nospace-paragraph">Better money for spending.</p>
-        <p class="nospace-paragraph">Better money for giving.</p>
+    <div class="outer-wrapper">
+        <div class="container">
+            <h1>Coming Soon</h1>
+            <p><em>“To whom much has been given, much will be required”</em></p>
+            <p></p>
+            <p class="nospace-paragraph">Better money for saving.</p>
+            <p class="nospace-paragraph">Better money for spending.</p>
+            <p class="nospace-paragraph">Better money for giving.</p>
 
-        <!-- Animated Text Section -->
-        <div class="animated-text-container">
-            Your <span id="animatedText" class="animated-text show">church</span> needs a strategic Bitcoin reserve.
-        </div>
+            <!-- Animated Text Section -->
+            <div class="animated-text-container">
+                Your <span id="animatedText" class="animated-text show">church</span> needs a strategic Bitcoin reserve.
+            </div>
 
-        <p></p>
-        <p>We're here to help.</p>
-        
-        <!-- Email Submission Form -->
-        <form class="email-form" action="https://usebasin.com/f/5915c869a160" method="POST">
-            <input type="email" id="email" name="email" class="email-input" placeholder="Enter your email" required>
-            <button type="submit" class="submit-btn">Notify Me</button>
-        </form>
-        
-        <!-- JavaScript Widget Integration -->
-        <div class="widget-placeholder">
-            <lightning-widget 
-              name="Support Our Work" 
-              accent="#6f7674" 
-              to="giveinbitcoin@coinos.io" 
-              image="https://giveinbitcoin.github.io/logo.png"
-              amounts="1000,5000,10000"
-              labels="1000👍,5000⭐🙏,10000🔥🚀👑"
-            ></lightning-widget>
+            <p></p>
+            <p>We're here to help.</p>
+            
+            <!-- Email Submission Form -->
+            <form class="email-form" action="https://usebasin.com/f/5915c869a160" method="POST">
+                <input type="email" id="email" name="email" class="email-input" placeholder="Enter your email" required>
+                <button type="submit" class="submit-btn">Notify Me</button>
+            </form>
+            
+            <!-- JavaScript Widget Integration -->
+            <div class="widget-placeholder">
+                <lightning-widget 
+                  name="Support Our Work" 
+                  accent="#6f7674" 
+                  to="giveinbitcoin@coinos.io" 
+                  image="https://giveinbitcoin.github.io/logo.png"
+                  amounts="1000,5000,10000"
+                  labels="1000👍,5000⭐🙏,10000🔥🚀👑"
+                ></lightning-widget>
+            </div>
         </div>
     </div>
     
