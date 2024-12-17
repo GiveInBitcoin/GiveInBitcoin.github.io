@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ctenold.github.io/sitemap.xml
+Sitemap: https://GiveInBitcoin.github.io/sitemap.xml
