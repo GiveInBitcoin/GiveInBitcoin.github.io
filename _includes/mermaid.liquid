@@ -1,0 +1,21 @@
+{% if page.mermaid == true %}
+  <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+    console.log("Checking if mermaid is loaded:", typeof mermaid);
+    if (typeof mermaid !== 'undefined') {
+        mermaid.initialize({
+        startOnLoad: true,
+        theme: 'dark',
+        flowchart: {
+            useMaxWidth: false,
+            htmlLabels: true
+        }
+        });
+        mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+    } else {
+        console.error("Mermaid is not defined");
+    }
+    });
+  </script>
+{% endif %}

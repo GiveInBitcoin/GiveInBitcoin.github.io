@@ -131,8 +131,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Cole's Blog # blog_name will be displayed in your blog page
-blog_description: Musings
+blog_name: Give in Bitcoin Blog # blog_name will be displayed in your blog page
+blog_description: Articles Discussing Giving Bitcoin
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -214,6 +214,7 @@ latest_posts:
 markdown: kramdown
 highlighter: rouge
 kramdown:
+  parse_block_html: true
   input: GFM
   syntax_highlighter_opts:
     css_class: "highlight"
@@ -240,7 +241,6 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
   - readme_preview/

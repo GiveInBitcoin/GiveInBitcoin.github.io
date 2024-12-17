@@ -1,16 +1,16 @@
 ---
 layout: page
-title: submenus
+title: For Churches
 nav: true
 nav_order: 8
 dropdown: true
 children:
-  - title: publications
-    permalink: /publications/
+  - title: Why Bitcoin?
+    permalink: /churches-why-bitcoin/
   - title: divider
-  - title: projects
-    permalink: /projects/
+  - title: Guide & FAQ
+    permalink: /church-guide/
   - title: divider
-  - title: blog
+  - title: 
     permalink: /blog/
 ---
